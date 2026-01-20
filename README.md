@@ -1,7 +1,7 @@
 # WEB BASE V3
 
 ## Web base v3 based on:
-
+- Khởi động: NODE_OPTIONS=--openssl-legacy-provider npm run dev
 - React 17, umijs, antd v4
 - TypeScript
 - SSO with Keycloak
