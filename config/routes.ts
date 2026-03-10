@@ -1,4 +1,5 @@
-﻿export default [
+﻿
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -42,6 +43,18 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
+	{
+		path: '/oan-tu-ti',
+		name: 'Oẳn Tù Tì',
+		icon: 'SmileOutlined',
+		component: './OanTuTi',
+	},
+	{
+		path: '/ngan-hang-cau-hoi',
+		name: 'Ngân hàng câu hỏi',
+		icon: 'BookOutlined',
+		component: './NganHangCauHoi',
+	},
 
 	// DANH MUC HE THONG
 	// {
@@ -60,6 +73,7 @@
 	{
 		path: '/notification',
 		routes: [
+	
 			{
 				path: './subscribe',
 				exact: true,
