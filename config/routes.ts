@@ -1,4 +1,4 @@
-﻿export default [
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -56,6 +56,38 @@
 	// 		},
 	// 	],
 	// },
+
+	{
+		name: 'Quản Lý Spa',
+		path: '/quan-ly',
+		icon: 'crown',
+		routes: [
+			{
+				name: 'Nhân Viên',
+				path: 'nhan-vien',
+				component: './NhanVien',
+				icon: 'team',
+			},
+			{
+				name: 'Dịch Vụ',
+				path: 'dich-vu',
+				component: './DichVu',
+				icon: 'shopping',
+			},
+			{
+				name: 'Lịch Hẹn',
+				path: 'lich-hen',
+				component: './LichHen',
+				icon: 'calendar',
+			},
+			{
+				name: 'Thống Kê',
+				path: 'thong-ke',
+				component: './ThongKe',
+				icon: 'barChart',
+			},
+		],
+	},
 
 	{
 		path: '/notification',
