@@ -1,0 +1,363 @@
+/* ========================================
+   DESTINATION DETAIL MODAL - Global Styles
+   Modal renders as portal outside .kham-pha-page,
+   so we must use the modal's own className.
+   ======================================== */
+
+.destination-detail-modal {
+	.ant-modal-content {
+		border-radius: 20px;
+		overflow: hidden;
+		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+	}
+
+	.ant-modal-body {
+		padding: 0 !important;
+	}
+
+	.ant-modal-close {
+		top: 12px;
+		right: 12px;
+		z-index: 10;
+
+		.ant-modal-close-x {
+			width: 36px;
+			height: 36px;
+			line-height: 36px;
+			font-size: 16px;
+			background: rgba(255, 255, 255, 0.9);
+			border-radius: 50%;
+			backdrop-filter: blur(8px);
+			color: #333;
+			transition: all 0.2s ease;
+
+			&:hover {
+				background: #fff;
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	/* ===== HERO IMAGE ===== */
+	.detail-hero {
+		position: relative;
+		width: 100%;
+		height: 320px;
+		overflow: hidden;
+
+		.detail-hero-img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+
+		.detail-hero-overlay {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 60%;
+			background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+			pointer-events: none;
+		}
+
+		.detail-hero-badges {
+			position: absolute;
+			top: 16px;
+			left: 16px;
+			z-index: 2;
+
+			.detail-type-tag {
+				padding: 4px 14px;
+				border-radius: 20px;
+				font-size: 13px;
+				font-weight: 600;
+				border: none;
+			}
+		}
+
+		.detail-hero-info {
+			position: absolute;
+			bottom: 20px;
+			left: 24px;
+			right: 24px;
+			z-index: 2;
+
+			.detail-hero-title {
+				font-size: 26px;
+				font-weight: 800;
+				color: #fff;
+				margin: 0 0 6px 0;
+				text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+				line-height: 1.2;
+			}
+
+			.detail-hero-location {
+				display: flex;
+				align-items: center;
+				gap: 6px;
+				color: rgba(255, 255, 255, 0.9);
+				font-size: 14px;
+
+				.anticon {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	/* ===== BODY ===== */
+	.detail-body {
+		padding: 24px;
+	}
+
+	/* ===== META ROW ===== */
+	.detail-meta-row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+		margin-bottom: 24px;
+		padding: 14px 20px;
+		background: #fafbfc;
+		border-radius: 14px;
+		border: 1px solid #f0f0f0;
+
+		.meta-item {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+
+			.meta-icon {
+				font-size: 18px;
+
+				&.star {
+					color: #f59e0b;
+				}
+
+				&.clock {
+					color: #3b82f6;
+				}
+			}
+
+			.meta-value {
+				font-size: 15px;
+				font-weight: 600;
+				color: #1a1a2e;
+			}
+
+			.meta-stars {
+				font-size: 14px;
+				margin-left: 4px;
+
+				.ant-rate-star {
+					margin-right: 3px;
+				}
+			}
+		}
+
+		.duration-item {
+			.meta-value {
+				font-weight: 500;
+				color: #555;
+			}
+		}
+	}
+
+	/* ===== DESCRIPTION ===== */
+	.detail-description-section {
+		margin-bottom: 24px;
+
+		.section-title {
+			font-size: 16px;
+			font-weight: 700;
+			color: #1a1a2e;
+			margin-bottom: 10px;
+			padding-left: 12px;
+			border-left: 3px solid #3b82f6;
+		}
+
+		.detail-description {
+			color: #555;
+			font-size: 14px;
+			line-height: 1.8;
+			margin: 0;
+		}
+	}
+
+	/* ===== COST CARDS ===== */
+	.detail-cost-section {
+		margin-bottom: 20px;
+
+		.section-title {
+			font-size: 16px;
+			font-weight: 700;
+			color: #1a1a2e;
+			margin-bottom: 14px;
+			padding-left: 12px;
+			border-left: 3px solid #22c55e;
+		}
+
+		.cost-cards {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 14px;
+		}
+
+		.cost-card {
+			display: flex;
+			align-items: center;
+			gap: 14px;
+			padding: 16px;
+			border-radius: 14px;
+			transition: all 0.2s ease;
+			border: 1px solid transparent;
+
+			&:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+			}
+
+			&.food {
+				background: linear-gradient(135deg, #fffbeb, #fef3c7);
+				border-color: #fde68a;
+			}
+
+			&.accommodation {
+				background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+				border-color: #ddd6fe;
+			}
+
+			&.transport {
+				background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+				border-color: #bae6fd;
+			}
+
+			.cost-card-icon {
+				width: 44px;
+				height: 44px;
+				border-radius: 12px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 20px;
+				flex-shrink: 0;
+			}
+
+			&.food .cost-card-icon {
+				background: #f59e0b;
+				color: #fff;
+			}
+
+			&.accommodation .cost-card-icon {
+				background: #8b5cf6;
+				color: #fff;
+			}
+
+			&.transport .cost-card-icon {
+				background: #0ea5e9;
+				color: #fff;
+			}
+
+			.cost-card-info {
+				min-width: 0;
+
+				.cost-card-label {
+					font-size: 12px;
+					color: #888;
+					margin-bottom: 2px;
+				}
+
+				.cost-card-value {
+					font-size: 16px;
+					font-weight: 700;
+					color: #1a1a2e;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+
+	/* ===== TOTAL BAR ===== */
+	.detail-total-bar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 16px 20px;
+		background: linear-gradient(135deg, #1e3a5f, #1a1a2e);
+		border-radius: 14px;
+
+		.total-label {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			color: rgba(255, 255, 255, 0.85);
+			font-size: 15px;
+			font-weight: 500;
+
+			.anticon {
+				font-size: 18px;
+				color: #f59e0b;
+			}
+		}
+
+		.total-value {
+			font-size: 22px;
+			font-weight: 800;
+			color: #fff;
+			letter-spacing: 0.3px;
+		}
+	}
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+	.destination-detail-modal {
+		.detail-hero {
+			height: 240px;
+
+			.detail-hero-info .detail-hero-title {
+				font-size: 22px;
+			}
+		}
+
+		.detail-meta-row {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 10px;
+		}
+
+		.detail-cost-section .cost-cards {
+			grid-template-columns: 1fr;
+		}
+
+		.detail-total-bar {
+			flex-direction: column;
+			gap: 8px;
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.destination-detail-modal {
+		.detail-hero {
+			height: 200px;
+
+			.detail-hero-info {
+				bottom: 14px;
+				left: 16px;
+				right: 16px;
+
+				.detail-hero-title {
+					font-size: 20px;
+				}
+			}
+		}
+
+		.detail-body {
+			padding: 16px;
+		}
+	}
+}

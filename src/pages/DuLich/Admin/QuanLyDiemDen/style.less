@@ -1,0 +1,81 @@
+@import '~antd/es/style/themes/default.less';
+
+.admin-diem-den-page {
+	.page-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 24px;
+		flex-wrap: wrap;
+		gap: 12px;
+
+		.page-title {
+			font-size: 28px;
+			font-weight: 700;
+			color: #1a1a2e;
+			margin: 0;
+		}
+	}
+
+	.table-wrapper {
+		background: #fff;
+		border-radius: 16px;
+		padding: 20px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+		.ant-table {
+			border-radius: 12px;
+		}
+
+		.table-image {
+			width: 80px;
+			height: 56px;
+			object-fit: cover;
+			border-radius: 8px;
+		}
+
+		.type-tag {
+			border-radius: 12px;
+			font-weight: 500;
+		}
+	}
+
+	// ===== DESTINATION FORM =====
+	.dest-form {
+		.upload-wrapper {
+			.ant-upload-select-picture-card {
+				border-radius: 12px;
+				width: 120px;
+				height: 120px;
+			}
+		}
+
+		.preview-image {
+			width: 120px;
+			height: 120px;
+			object-fit: cover;
+			border-radius: 12px;
+			border: 1px solid #d9d9d9;
+		}
+
+		.cost-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 12px;
+
+			@media (max-width: 576px) {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.admin-diem-den-page {
+		.page-header {
+			.page-title {
+				font-size: 22px;
+			}
+		}
+	}
+}
