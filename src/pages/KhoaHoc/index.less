@@ -1,0 +1,209 @@
+/**
+ * Page styles — BEM naming convention for predictable specificity.
+ *
+ * Why not CSS Modules: UmiJS + Ant Design Pro uses global LESS by convention.
+ * BEM prefixing (`course-*`) provides namespace isolation without tooling changes.
+ */
+
+/* ─── Toolbar ─── */
+.course-toolbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-bottom: 20px;
+	padding: 20px 24px;
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.course-toolbar__left {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+.course-toolbar__right {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
+
+.course-toolbar__search {
+	width: 280px;
+	border-radius: 6px;
+}
+
+.course-toolbar__select {
+	min-width: 180px;
+}
+
+.course-toolbar__sort-btn {
+	border-radius: 6px;
+}
+
+.course-toolbar__count {
+	font-size: 13px;
+	color: #8c8c8c;
+	white-space: nowrap;
+}
+
+.course-toolbar__create-btn {
+	border-radius: 6px;
+	font-weight: 500;
+}
+
+/* ─── Table ─── */
+.course-table {
+	background: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+	overflow: hidden;
+}
+
+.course-table .ant-table-thead > tr > th {
+	background: #fafafa;
+	font-weight: 600;
+	font-size: 13px;
+	color: #434343;
+	border-bottom: 2px solid #f0f0f0;
+}
+
+.course-table .ant-table-tbody > tr:hover > td {
+	background: #f6f9ff;
+}
+
+.course-table__id {
+	font-family: 'SF Mono', 'Fira Code', monospace;
+	font-size: 12px;
+	color: #8c8c8c;
+}
+
+.course-table__name {
+	color: #1d1d1d;
+	font-size: 14px;
+}
+
+.course-table__enrollment {
+	font-weight: 600;
+	font-size: 14px;
+	color: #1890ff;
+}
+
+.course-table__enrollment--empty {
+	color: #bfbfbf;
+}
+
+.course-table__status-tag {
+	border-radius: 4px;
+	font-size: 12px;
+	font-weight: 500;
+	padding: 2px 10px;
+}
+
+.course-table__action-btn {
+	border-radius: 6px;
+	transition: all 0.2s ease;
+}
+
+.course-table__action-btn--edit:hover {
+	color: #1890ff !important;
+	background: #e6f7ff;
+}
+
+.course-table__action-btn--delete:hover {
+	background: #fff1f0;
+}
+
+/* ─── Form ─── */
+.course-form {
+	padding: 8px 0;
+}
+
+.course-form .ant-form-item-label > label {
+	font-weight: 500;
+	color: #262626;
+}
+
+.course-form__row {
+	display: flex;
+	gap: 16px;
+}
+
+.course-form__half {
+	flex: 1;
+}
+
+.course-form__footer {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 16px;
+	border-top: 1px solid #f0f0f0;
+	margin-top: 8px;
+}
+
+/* ─── Page wrapper ─── */
+.course-management {
+	padding: 24px;
+	min-height: calc(100vh - 160px);
+}
+
+.course-management__header {
+	margin-bottom: 24px;
+}
+
+.course-management__title {
+	font-size: 24px;
+	font-weight: 700;
+	color: #1d1d1d;
+	margin: 0 0 4px 0;
+}
+
+.course-management__subtitle {
+	font-size: 14px;
+	color: #8c8c8c;
+	margin: 0;
+}
+
+/* ─── Modal override ─── */
+.course-modal .ant-modal-header {
+	border-bottom: 1px solid #f0f0f0;
+	padding: 18px 24px;
+}
+
+.course-modal .ant-modal-title {
+	font-size: 17px;
+	font-weight: 600;
+}
+
+.course-modal .ant-modal-body {
+	padding: 20px 24px;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+	.course-toolbar {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.course-toolbar__left {
+		flex-direction: column;
+	}
+
+	.course-toolbar__search {
+		width: 100%;
+	}
+
+	.course-toolbar__select {
+		min-width: 100%;
+	}
+
+	.course-form__row {
+		flex-direction: column;
+		gap: 0;
+	}
+}
