@@ -1,4 +1,4 @@
-﻿export default [
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -56,6 +56,53 @@
 	// 		},
 	// 	],
 	// },
+
+	// BLOG CÁ NHÂN
+	{
+		path: '/blog',
+		name: 'Blog',
+		icon: 'ReadOutlined',
+		routes: [
+			{
+				path: '/blog',
+				component: './Blog/Home',
+				exact: true,
+				hideInMenu: true,
+			},
+			{
+				path: '/blog/about',
+				name: 'Về tác giả',
+				component: './Blog/About',
+				exact: true,
+				hideInMenu: true,
+			},
+			{
+				path: '/blog/:id',
+				component: './Blog/Detail',
+				exact: true,
+				hideInMenu: true,
+			},
+		]
+	},
+
+	// QUẢN LÝ BLOG
+	{
+		path: '/admin-blog',
+		name: 'Quản lý Blog',
+		icon: 'EditOutlined',
+		routes: [
+			{
+				path: '/admin-blog/posts',
+				name: 'Bài viết',
+				component: './AdminBlog/PostManagement',
+			},
+			{
+				path: '/admin-blog/tags',
+				name: 'Thẻ (Tags)',
+				component: './AdminBlog/TagManagement',
+			},
+		]
+	},
 
 	{
 		path: '/notification',
