@@ -1,4 +1,4 @@
-﻿export default [
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -56,6 +56,39 @@
 	// 		},
 	// 	],
 	// },
+
+	{
+		name: 'Fitness',
+		path: '/fitness',
+		icon: 'HeartOutlined',
+		routes: [
+			{
+				path: '/fitness/dashboard',
+				name: 'Dashboard',
+				component: './FitnessApp/Dashboard',
+			},
+			{
+				path: '/fitness/workouts',
+				name: 'Nhật ký tập luyện',
+				component: './FitnessApp/WorkoutLog',
+			},
+			{
+				path: '/fitness/metrics',
+				name: 'Nhật ký chỉ số',
+				component: './FitnessApp/HealthMetrics',
+			},
+			{
+				path: '/fitness/goals',
+				name: 'Quản lý mục tiêu',
+				component: './FitnessApp/GoalManagement',
+			},
+			{
+				path: '/fitness/exercises',
+				name: 'Thư viện bài tập',
+				component: './FitnessApp/ExerciseLibrary',
+			},
+		],
+	},
 
 	{
 		path: '/notification',
