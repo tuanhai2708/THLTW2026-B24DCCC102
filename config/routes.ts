@@ -1,4 +1,4 @@
-﻿export default [
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -41,6 +41,28 @@
 		name: 'TodoList',
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
+	},
+	{
+		path: '/task-tracker',
+		name: 'Task Tracker',
+		icon: 'ProjectOutlined',
+		routes: [
+			{
+				path: '/task-tracker/dashboard',
+				name: 'Dashboard',
+				component: './TaskTracker/Dashboard',
+			},
+			{
+				path: '/task-tracker/kanban',
+				name: 'Kanban Board',
+				component: './TaskTracker/KanbanBoard',
+			},
+			{
+				path: '/task-tracker/list',
+				name: 'Danh sách Task',
+				component: './TaskTracker/TaskList',
+			},
+		],
 	},
 
 	// DANH MUC HE THONG
